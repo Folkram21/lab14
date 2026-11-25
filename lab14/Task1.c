@@ -23,6 +23,15 @@ int put_elements(double* ptr_array, int n) {
 	return 0;
 }
 
+double* calc_elements(double* ptr_array, int n) {
+
+	for (int i = 0; i < N; i++) {
+		ptr_array[i] = ptr_array[i] / 10.0f;
+	}
+
+	return ptr_array;
+}
+
 int main() {
 
 	setlocale(LC_CTYPE, "RUS");
@@ -36,6 +45,7 @@ int main() {
 	scanf("%d", &size);
 
 	full_elements(array, size);
+	calc_elements(array, size);
 	put_elements(array, size);
 
 	return 0;
