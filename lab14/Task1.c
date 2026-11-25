@@ -14,6 +14,15 @@ double* full_elements(double* ptr_array, int n) {
 	return ptr_array;
 }
 
+int put_elements(double* ptr_array, int n) {
+
+	for (int i = 0; i < n; i++) {
+		printf("\narray[%d] = %lf", i, ptr_array[i]);
+	}
+
+	return 0;
+}
+
 int main() {
 
 	setlocale(LC_CTYPE, "RUS");
@@ -27,6 +36,7 @@ int main() {
 	scanf("%d", &size);
 
 	full_elements(array, size);
+	put_elements(array, size);
 
 	return 0;
 }
